@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import Image from 'next/image';
-import { Search, Building2, Trees, GraduationCap } from 'lucide-react';
+import { Search, Building2, Trees, GraduationCap, Users, User } from 'lucide-react';
 import { SchoolCard } from '@/components/SchoolCard';
 import { SchoolDetailModal } from '@/components/SchoolDetailModal';
 import { schools } from '@/data/schools';
@@ -13,7 +13,12 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedSchool, setSelectedSchool] = useState<School | null>(null);
   const [activeTab, setActiveTab] = useState<'Urbana' | 'Rural'>('Urbana');
-  const [showOnlyCBR, setShowOnlyCBR] = useState(false);
+
+  // Rural Sub-filters
+  const [ruralFilter, setRuralFilter] = useState<'ALL' | 'UNIDOCENTE' | 'PLURIDOCENTE' | 'CBR'>('ALL');
+
+  // Urban Sub-filters
+  const [urbanFilter, setUrbanFilter] = useState<'ALL' | 'TIEMPO_COMPLETO' | 'TIEMPO_EXTENDIDO' | 'DOBLE_TURNO' | 'JARDIN' | 'ARTE' | 'EDIFICIO_COMPARTIDO'>('ALL');
 
   // Filter logic
   const filteredSchools = useMemo(() => {
@@ -21,10 +26,26 @@ export default function Home() {
       // 1. Zone Filter (Strict)
       if (school.zone !== activeTab) return false;
 
-      // 2. CBR Filter (Only for Rural)
-      if (activeTab === 'Rural' && showOnlyCBR && !school.hasCBR) return false;
+      // 2. Rural Sub-filters
+      if (activeTab === 'Rural') {
+        if (ruralFilter === 'UNIDOCENTE' && school.ruralModal !== 'UNIDOCENTE') return false;
+        if (ruralFilter === 'PLURIDOCENTE' && school.ruralModal !== 'PLURIDOCENTE') return false;
+        if (ruralFilter === 'CBR' && !school.hasCBR) return false;
+      }
 
-      // 3. Search match
+      // 3. Urban Sub-filters
+      if (activeTab === 'Urbana') {
+        if (urbanFilter === 'TIEMPO_COMPLETO' && school.category !== 'Tiempo Completo') return false;
+        if (urbanFilter === 'TIEMPO_EXTENDIDO' && school.category !== 'Tiempo Extendido') return false;
+        if (urbanFilter === 'DOBLE_TURNO' && school.category !== 'Doble Turno') return false;
+        // Matches both JJC and JDT
+        if (urbanFilter === 'JARDIN' && !school.category.includes('Jardín')) return false;
+        if (urbanFilter === 'ARTE' && school.category !== 'Escuela de Arte') return false;
+        // Filter by hasSharedBuilding flag
+        if (urbanFilter === 'EDIFICIO_COMPARTIDO' && !school.hasSharedBuilding) return false;
+      }
+
+      // 4. Search match
       const searchLower = searchTerm.toLowerCase();
       if (!searchTerm) return true;
 
@@ -35,7 +56,16 @@ export default function Home() {
 
       return matchesSearch;
     });
-  }, [searchTerm, activeTab, showOnlyCBR]);
+  }, [searchTerm, activeTab, ruralFilter, urbanFilter]);
+
+  const handleTabChange = (tab: 'Urbana' | 'Rural') => {
+    setActiveTab(tab);
+    if (tab === 'Urbana') {
+      setRuralFilter('ALL'); // Reset rural filter when switching to Urban
+    } else {
+      setUrbanFilter('ALL'); // Reset urban filter when switching to Rural
+    }
+  };
 
   return (
     <main className="min-h-screen bg-slate-50 font-sans pb-20">
@@ -84,7 +114,7 @@ export default function Home() {
           <div className="flex flex-col items-center">
             <div className="flex gap-4 border-b border-slate-200 w-full justify-center">
               <button
-                onClick={() => { setActiveTab('Urbana'); setShowOnlyCBR(false); }}
+                onClick={() => handleTabChange('Urbana')}
                 className={cn(
                   "flex items-center gap-2 pb-4 px-6 border-b-2 font-semibold transition-all text-sm sm:text-base",
                   activeTab === 'Urbana'
@@ -96,7 +126,7 @@ export default function Home() {
                 Urbanas
               </button>
               <button
-                onClick={() => setActiveTab('Rural')}
+                onClick={() => handleTabChange('Rural')}
                 className={cn(
                   "flex items-center gap-2 pb-4 px-6 border-b-2 font-semibold transition-all text-sm sm:text-base",
                   activeTab === 'Rural'
@@ -111,21 +141,89 @@ export default function Home() {
 
             {/* Sub-filters for Rural */}
             {activeTab === 'Rural' && (
-              <div className="mt-4 animate-in fade-in slide-in-from-top-1">
-                <label className="flex items-center gap-2 cursor-pointer select-none bg-green-50 px-4 py-2 rounded-full border border-green-100 hover:bg-green-100 transition-colors">
-                  <input
-                    type="checkbox"
-                    className="w-4 h-4 text-green-600 rounded focus:ring-green-500 border-gray-300"
-                    checked={showOnlyCBR}
-                    onChange={(e) => setShowOnlyCBR(e.target.checked)}
-                  />
-                  <span className="text-sm font-medium text-green-800 flex items-center gap-1">
-                    <GraduationCap className="w-4 h-4" />
-                    Solo con Ciclo Básico (7°, 8°, 9°)
-                  </span>
-                </label>
+              <div className="mt-6 animate-in fade-in slide-in-from-top-1 overflow-x-auto max-w-full pb-2 scrollbar-none">
+                <div className="flex justify-center gap-2 w-max mx-auto px-4">
+                  <button
+                    onClick={() => setRuralFilter('ALL')}
+                    className={cn(
+                      "px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors whitespace-nowrap",
+                      ruralFilter === 'ALL'
+                        ? "bg-green-600 text-white border-green-600"
+                        : "bg-white text-slate-600 border-slate-200 hover:border-green-300"
+                    )}
+                  >
+                    Todas
+                  </button>
+                  <button
+                    onClick={() => setRuralFilter('UNIDOCENTE')}
+                    className={cn(
+                      "px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors flex items-center gap-1 whitespace-nowrap",
+                      ruralFilter === 'UNIDOCENTE'
+                        ? "bg-green-600 text-white border-green-600"
+                        : "bg-white text-slate-600 border-slate-200 hover:border-green-300"
+                    )}
+                  >
+                    <User className="w-3 h-3" />
+                    Unidocentes
+                  </button>
+                  <button
+                    onClick={() => setRuralFilter('PLURIDOCENTE')}
+                    className={cn(
+                      "px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors flex items-center gap-1 whitespace-nowrap",
+                      ruralFilter === 'PLURIDOCENTE'
+                        ? "bg-green-600 text-white border-green-600"
+                        : "bg-white text-slate-600 border-slate-200 hover:border-green-300"
+                    )}
+                  >
+                    <Users className="w-3 h-3" />
+                    Pluridocentes
+                  </button>
+                  <button
+                    onClick={() => setRuralFilter('CBR')}
+                    className={cn(
+                      "px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors flex items-center gap-1 whitespace-nowrap",
+                      ruralFilter === 'CBR'
+                        ? "bg-indigo-600 text-white border-indigo-600"
+                        : "bg-white text-slate-600 border-slate-200 hover:border-indigo-300"
+                    )}
+                  >
+                    <GraduationCap className="w-3 h-3" />
+                    Solo con CBR
+                  </button>
+                </div>
               </div>
             )}
+
+            {/* Sub-filters for Urban */}
+            {activeTab === 'Urbana' && (
+              <div className="mt-6 animate-in fade-in slide-in-from-top-1 overflow-x-auto max-w-full pb-2 scrollbar-none">
+                <div className="flex justify-start sm:justify-center gap-2 w-max mx-auto px-4">
+                  {[
+                    { id: 'ALL', label: 'Todas', color: 'blue' },
+                    { id: 'TIEMPO_COMPLETO', label: 'Tiempo Completo', color: 'purple' },
+                    { id: 'TIEMPO_EXTENDIDO', label: 'Tiempo Extendido', color: 'blue' },
+                    { id: 'DOBLE_TURNO', label: 'Doble Turno', color: 'orange' },
+                    { id: 'JARDIN', label: 'Jardines', color: 'pink' },
+                    { id: 'ARTE', label: 'Arte', color: 'fuchsia' },
+                    { id: 'EDIFICIO_COMPARTIDO', label: 'Edificio Compartido', color: 'amber' },
+                  ].map((tab) => (
+                    <button
+                      key={tab.id}
+                      onClick={() => setUrbanFilter(tab.id as any)}
+                      className={cn(
+                        "px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors whitespace-nowrap",
+                        urbanFilter === tab.id
+                          ? `bg-${tab.color}-600 text-white border-${tab.color}-600`
+                          : "bg-white text-slate-600 border-slate-200 hover:bg-slate-50"
+                      )}
+                    >
+                      {tab.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
           </div>
         </div>
       </section>
@@ -133,7 +231,11 @@ export default function Home() {
       {/* Grid Results */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="mb-6 flex justify-between items-center text-sm text-slate-500 font-medium">
-          <span>Mostrando {activeTab.toLowerCase()}s {showOnlyCBR ? '(con CBR)' : ''}</span>
+          <span>
+            Mostrando {activeTab.toLowerCase()}s
+            {activeTab === 'Rural' && ruralFilter !== 'ALL' ? ` (${ruralFilter.toLowerCase()})` : ''}
+            {activeTab === 'Urbana' && urbanFilter !== 'ALL' ? ` (${urbanFilter.replace('_', ' ').toLowerCase()})` : ''}
+          </span>
           <span>{filteredSchools.length} resultados</span>
         </div>
 
@@ -153,7 +255,7 @@ export default function Home() {
               <Search className="w-8 h-8 text-slate-400" />
             </div>
             <h3 className="text-lg font-medium text-slate-900">No se encontraron escuelas</h3>
-            <p className="text-slate-500">Intenta cambiar el criterio de búsqueda.</p>
+            <p className="text-slate-500">Intenta cambiar el criterio de búsqueda (o el filtro seleccionado).</p>
           </div>
         )}
       </section>

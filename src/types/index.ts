@@ -2,6 +2,10 @@ export type SchoolCategory =
     | 'Tiempo Completo'
     | 'Doble Turno'
     | 'Tiempo Extendido'
+    | 'Tiempo Pedagógico Ampliado'
+    | 'Jardín de Jornada Completa'
+    | 'Jardín de Jornada Doble Turno'
+    | 'Escuela de Arte'
     | 'Especial'
     | 'Aprender'
     | 'Común'
@@ -33,8 +37,9 @@ export interface School {
         googleMapsLink?: string;
         address?: string;
     };
-    category: SchoolCategory | 'Sin Categoría' | 'Especial';
+    category: SchoolCategory;
     hasBoarding: boolean;
+    hasSharedBuilding?: boolean;
     hasCBR?: boolean;
     ruralModal?: 'UNIDOCENTE' | 'PLURIDOCENTE' | null;
     contact: {

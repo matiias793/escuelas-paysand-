@@ -1,6 +1,6 @@
 import React from 'react';
 import { School } from '@/types';
-import { Phone, User, GraduationCap, Utensils, Star, Clock } from 'lucide-react';
+import { Phone, User, GraduationCap, Utensils, Star, Clock, Users } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface SchoolCardProps {
@@ -35,7 +35,7 @@ export const SchoolCard: React.FC<SchoolCardProps> = ({ school, onClick }) => {
                         </div>
                         <div>
                             <h3 className="font-bold text-lg text-slate-900 leading-none group-hover:text-blue-700 transition-colors">
-                                Escuela N° {school.number}
+                                {school.category.includes('Jardín') ? 'Jardín N°' : 'Escuela N°'} {school.number}
                             </h3>
                             <p className="text-xs text-slate-400 font-medium mt-1 uppercase tracking-wide">
                                 {school.zone}
@@ -52,10 +52,46 @@ export const SchoolCard: React.FC<SchoolCardProps> = ({ school, onClick }) => {
                             Tiempo Completo
                         </span>
                     )}
+                    {school.category === 'Tiempo Extendido' && (
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-blue-100 text-blue-700 text-[10px] font-bold uppercase tracking-wider border border-blue-200">
+                            <Clock className="w-3 h-3" />
+                            Tiempo Extendido
+                        </span>
+                    )}
+                    {school.category === 'Tiempo Pedagógico Ampliado' && (
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-cyan-100 text-cyan-700 text-[10px] font-bold uppercase tracking-wider border border-cyan-200">
+                            <Clock className="w-3 h-3" />
+                            T. Pedagógico Ampliado
+                        </span>
+                    )}
+                    {school.category === 'Doble Turno' && (
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-orange-100 text-orange-700 text-[10px] font-bold uppercase tracking-wider border border-orange-200">
+                            <Users className="w-3 h-3" />
+                            Doble Turno
+                        </span>
+                    )}
+                    {(school.category === 'Jardín de Jornada Completa' || school.category === 'Jardín de Jornada Doble Turno') && (
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-pink-100 text-pink-700 text-[10px] font-bold uppercase tracking-wider border border-pink-200">
+                            <Star className="w-3 h-3" />
+                            Jardín
+                        </span>
+                    )}
+                    {school.category === 'Escuela de Arte' && (
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-fuchsia-100 text-fuchsia-700 text-[10px] font-bold uppercase tracking-wider border border-fuchsia-200">
+                            <Star className="w-3 h-3" />
+                            Arte
+                        </span>
+                    )}
                     {school.category === 'Especial' && (
                         <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-amber-100 text-amber-700 text-[10px] font-bold uppercase tracking-wider border border-amber-200">
                             <Star className="w-3 h-3" />
                             Especial
+                        </span>
+                    )}
+                    {school.hasSharedBuilding && (
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-amber-100 text-amber-700 text-[10px] font-bold uppercase tracking-wider border border-amber-200">
+                            <Users className="w-3 h-3" />
+                            Edificio Compartido
                         </span>
                     )}
                     {school.hasCBR && (
@@ -85,6 +121,21 @@ export const SchoolCard: React.FC<SchoolCardProps> = ({ school, onClick }) => {
                             <p className="text-sm text-slate-700 font-medium line-clamp-1">
                                 {school.foodService}
                             </p>
+                            {/* Water Budget Indicator */}
+                            <div className="mt-1">
+                                {school.supplies.hasWaterBudget ? (
+                                    <div className="flex items-center gap-1.5 text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-100 w-fit mt-1">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
+                                        Partida de Agua
+                                    </div>
+                                ) : (
+                                    school.zone === 'Rural' && (
+                                        <p className="text-[10px] text-slate-400 font-medium italic mt-0.5">
+                                            Sin partida de agua
+                                        </p>
+                                    )
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>

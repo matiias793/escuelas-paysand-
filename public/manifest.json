@@ -1,0 +1,16 @@
+{
+    "name": "Agenda Escolar Paysandú",
+    "short_name": "Agenda Escolar",
+    "description": "Directorio de escuelas públicas de Paysandú",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "icons": [
+        {
+            "src": "/logo.jpg",
+            "sizes": "192x192 512x512",
+            "type": "image/jpeg"
+        }
+    ]
+}

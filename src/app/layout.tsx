@@ -15,6 +15,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Agenda Escolar Paysandú",
   description: "Directorio de escuelas públicas de Paysandú",
+  manifest: "/manifest.json",
+  icons: {
+    icon: "/logo.jpg",
+    apple: "/logo.jpg",
+  },
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({

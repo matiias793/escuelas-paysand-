@@ -7,7 +7,7 @@ export const schools: School[] = [
     "name": "Escuela N° 1",
     "zone": "Urbana",
     "location": {},
-    "category": "Sin Categoría",
+    "category": "Tiempo Extendido",
     "hasBoarding": false,
     "contact": {
       "directorName": "",
@@ -31,7 +31,7 @@ export const schools: School[] = [
     "name": "Escuela N° 2",
     "zone": "Urbana",
     "location": {},
-    "category": "Sin Categoría",
+    "category": "Doble Turno",
     "hasBoarding": false,
     "contact": {
       "directorName": "",
@@ -71,7 +71,8 @@ export const schools: School[] = [
       "hasWaterBudget": false
     },
     "hasCBR": false,
-    "ruralModal": null
+    "ruralModal": null,
+    "hasSharedBuilding": true
   },
   {
     "id": "5",
@@ -79,7 +80,7 @@ export const schools: School[] = [
     "name": "Escuela N° 5",
     "zone": "Urbana",
     "location": {},
-    "category": "Sin Categoría",
+    "category": "Doble Turno",
     "hasBoarding": false,
     "contact": {
       "directorName": "",
@@ -119,7 +120,8 @@ export const schools: School[] = [
       "hasWaterBudget": false
     },
     "hasCBR": false,
-    "ruralModal": null
+    "ruralModal": null,
+    "hasSharedBuilding": true
   },
   {
     "id": "7",
@@ -215,7 +217,8 @@ export const schools: School[] = [
       "hasWaterBudget": false
     },
     "hasCBR": false,
-    "ruralModal": null
+    "ruralModal": null,
+    "hasSharedBuilding": true
   },
   {
     "id": "12",
@@ -247,7 +250,7 @@ export const schools: School[] = [
     "name": "Escuela N° 13",
     "zone": "Urbana",
     "location": {},
-    "category": "Sin Categoría",
+    "category": "Doble Turno",
     "hasBoarding": false,
     "contact": {
       "directorName": "",
@@ -487,7 +490,7 @@ export const schools: School[] = [
     "name": "Escuela N° 23",
     "zone": "Urbana",
     "location": {},
-    "category": "Sin Categoría",
+    "category": "Doble Turno",
     "hasBoarding": false,
     "contact": {
       "directorName": "",
@@ -575,7 +578,8 @@ export const schools: School[] = [
       "hasWaterBudget": false
     },
     "hasCBR": false,
-    "ruralModal": null
+    "ruralModal": null,
+    "hasSharedBuilding": true
   },
   {
     "id": "27",
@@ -583,7 +587,7 @@ export const schools: School[] = [
     "name": "Escuela N° 27",
     "zone": "Urbana",
     "location": {},
-    "category": "Sin Categoría",
+    "category": "Tiempo Pedagógico Ampliado",
     "hasBoarding": false,
     "contact": {
       "directorName": "",
@@ -935,7 +939,8 @@ export const schools: School[] = [
       "hasWaterBudget": false
     },
     "hasCBR": false,
-    "ruralModal": null
+    "ruralModal": null,
+    "hasSharedBuilding": true
   },
   {
     "id": "43",
@@ -1063,7 +1068,7 @@ export const schools: School[] = [
     "name": "Escuela N° 48",
     "zone": "Urbana",
     "location": {},
-    "category": "Sin Categoría",
+    "category": "Doble Turno",
     "hasBoarding": false,
     "contact": {
       "directorName": "",
@@ -1295,7 +1300,8 @@ export const schools: School[] = [
       "hasWaterBudget": false
     },
     "hasCBR": false,
-    "ruralModal": null
+    "ruralModal": null,
+    "hasSharedBuilding": true
   },
   {
     "id": "58",
@@ -1303,7 +1309,7 @@ export const schools: School[] = [
     "name": "Escuela N° 58",
     "zone": "Urbana",
     "location": {},
-    "category": "Sin Categoría",
+    "category": "Tiempo Completo",
     "hasBoarding": false,
     "contact": {
       "directorName": "",
@@ -1399,7 +1405,7 @@ export const schools: School[] = [
     "name": "Escuela N° 63",
     "zone": "Urbana",
     "location": {},
-    "category": "Sin Categoría",
+    "category": "Tiempo Completo",
     "hasBoarding": false,
     "contact": {
       "directorName": "",
@@ -1567,7 +1573,7 @@ export const schools: School[] = [
     "name": "Escuela N° 71",
     "zone": "Urbana",
     "location": {},
-    "category": "Sin Categoría",
+    "category": "Doble Turno",
     "hasBoarding": false,
     "contact": {
       "directorName": "",
@@ -1947,7 +1953,8 @@ export const schools: School[] = [
       "hasWaterBudget": false
     },
     "hasCBR": false,
-    "ruralModal": null
+    "ruralModal": null,
+    "hasSharedBuilding": true
   },
   {
     "id": "90",
@@ -1976,10 +1983,10 @@ export const schools: School[] = [
   {
     "id": "91",
     "number": 91,
-    "name": "Escuela N° 91",
+    "name": "Jardín N° 91",
     "zone": "Urbana",
     "location": {},
-    "category": "Sin Categoría",
+    "category": "Jardín de Jornada Doble Turno",
     "hasBoarding": false,
     "contact": {
       "directorName": "",
@@ -2051,7 +2058,7 @@ export const schools: School[] = [
     "name": "Escuela N° 95",
     "zone": "Urbana",
     "location": {},
-    "category": "Sin Categoría",
+    "category": "Doble Turno",
     "hasBoarding": false,
     "contact": {
       "directorName": "",
@@ -2115,7 +2122,8 @@ export const schools: School[] = [
       "hasWaterBudget": false
     },
     "hasCBR": false,
-    "ruralModal": null
+    "ruralModal": null,
+    "hasSharedBuilding": true
   },
   {
     "id": "102",
@@ -2144,10 +2152,10 @@ export const schools: School[] = [
   {
     "id": "103",
     "number": 103,
-    "name": "Escuela N° 103",
+    "name": "Jardín N° 103",
     "zone": "Urbana",
     "location": {},
-    "category": "Sin Categoría",
+    "category": "Jardín de Jornada Completa",
     "hasBoarding": false,
     "contact": {
       "directorName": "",
@@ -2168,10 +2176,10 @@ export const schools: School[] = [
   {
     "id": "104",
     "number": 104,
-    "name": "Escuela N° 104",
+    "name": "Jardín N° 104",
     "zone": "Urbana",
     "location": {},
-    "category": "Sin Categoría",
+    "category": "Jardín de Jornada Doble Turno",
     "hasBoarding": false,
     "contact": {
       "directorName": "",
@@ -2211,7 +2219,8 @@ export const schools: School[] = [
       "hasWaterBudget": false
     },
     "hasCBR": false,
-    "ruralModal": null
+    "ruralModal": null,
+    "hasSharedBuilding": true
   },
   {
     "id": "107",
@@ -2235,7 +2244,8 @@ export const schools: School[] = [
       "hasWaterBudget": false
     },
     "hasCBR": false,
-    "ruralModal": null
+    "ruralModal": null,
+    "hasSharedBuilding": true
   },
   {
     "id": "108",
@@ -2264,10 +2274,10 @@ export const schools: School[] = [
   {
     "id": "109",
     "number": 109,
-    "name": "Escuela N° 109",
+    "name": "Jardín N° 109",
     "zone": "Urbana",
     "location": {},
-    "category": "Sin Categoría",
+    "category": "Jardín de Jornada Completa",
     "hasBoarding": false,
     "contact": {
       "directorName": "",
@@ -2339,7 +2349,7 @@ export const schools: School[] = [
     "name": "Escuela N° 112",
     "zone": "Urbana",
     "location": {},
-    "category": "Sin Categoría",
+    "category": "Doble Turno",
     "hasBoarding": false,
     "contact": {
       "directorName": "",
@@ -2363,7 +2373,7 @@ export const schools: School[] = [
     "name": "Escuela N° 113",
     "zone": "Urbana",
     "location": {},
-    "category": "Sin Categoría",
+    "category": "Escuela de Arte",
     "hasBoarding": false,
     "contact": {
       "directorName": "",
@@ -2408,10 +2418,10 @@ export const schools: School[] = [
   {
     "id": "115",
     "number": 115,
-    "name": "Escuela N° 115",
+    "name": "Jardín N° 115",
     "zone": "Urbana",
     "location": {},
-    "category": "Sin Categoría",
+    "category": "Jardín de Jornada Completa",
     "hasBoarding": false,
     "contact": {
       "directorName": "",
@@ -2432,10 +2442,10 @@ export const schools: School[] = [
   {
     "id": "116",
     "number": 116,
-    "name": "Escuela N° 116",
+    "name": "Jardín N° 116",
     "zone": "Urbana",
     "location": {},
-    "category": "Sin Categoría",
+    "category": "Jardín de Jornada Completa",
     "hasBoarding": false,
     "contact": {
       "directorName": "",

@@ -42,6 +42,7 @@ CREATE TABLE schools (
     category school_category NOT NULL,
     has_boarding BOOLEAN DEFAULT FALSE,
     has_cbr BOOLEAN DEFAULT FALSE,
+    has_shared_building BOOLEAN DEFAULT FALSE,
     rural_modal TEXT, -- 'UNIDOCENTE', 'PLURIDOCENTE' or NULL
     
     -- Contact
