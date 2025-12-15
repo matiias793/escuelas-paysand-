@@ -199,13 +199,13 @@ export default function Home() {
               <div className="mt-6 animate-in fade-in slide-in-from-top-1 overflow-x-auto max-w-full pb-2 scrollbar-none">
                 <div className="flex justify-start sm:justify-center gap-2 w-max mx-auto px-4">
                   {[
-                    { id: 'ALL', label: 'Todas', color: 'blue' },
-                    { id: 'TIEMPO_COMPLETO', label: 'Tiempo Completo', color: 'purple' },
-                    { id: 'TIEMPO_EXTENDIDO', label: 'Tiempo Extendido', color: 'blue' },
-                    { id: 'DOBLE_TURNO', label: 'Doble Turno', color: 'orange' },
-                    { id: 'JARDIN', label: 'Jardines', color: 'pink' },
-                    { id: 'ARTE', label: 'Arte', color: 'fuchsia' },
-                    { id: 'EDIFICIO_COMPARTIDO', label: 'Edificio Compartido', color: 'amber' },
+                    { id: 'ALL', label: 'Todas', activeClass: 'bg-blue-600 text-white border-blue-600' },
+                    { id: 'TIEMPO_COMPLETO', label: 'Tiempo Completo', activeClass: 'bg-purple-600 text-white border-purple-600' },
+                    { id: 'TIEMPO_EXTENDIDO', label: 'Tiempo Extendido', activeClass: 'bg-blue-600 text-white border-blue-600' },
+                    { id: 'DOBLE_TURNO', label: 'Doble Turno', activeClass: 'bg-orange-600 text-white border-orange-600' },
+                    { id: 'JARDIN', label: 'Jardines', activeClass: 'bg-pink-600 text-white border-pink-600' },
+                    { id: 'ARTE', label: 'Arte', activeClass: 'bg-fuchsia-600 text-white border-fuchsia-600' },
+                    { id: 'EDIFICIO_COMPARTIDO', label: 'Edificio Compartido', activeClass: 'bg-amber-600 text-white border-amber-600' },
                   ].map((tab) => (
                     <button
                       key={tab.id}
@@ -213,7 +213,7 @@ export default function Home() {
                       className={cn(
                         "px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors whitespace-nowrap",
                         urbanFilter === tab.id
-                          ? `bg-${tab.color}-600 text-white border-${tab.color}-600`
+                          ? tab.activeClass
                           : "bg-white text-slate-600 border-slate-200 hover:bg-slate-50"
                       )}
                     >
