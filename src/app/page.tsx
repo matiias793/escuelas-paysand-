@@ -15,7 +15,7 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState<'Urbana' | 'Rural'>('Urbana');
 
   // Rural Sub-filters
-  const [ruralFilter, setRuralFilter] = useState<'ALL' | 'UNIDOCENTE' | 'PLURIDOCENTE' | 'CBR'>('ALL');
+  const [ruralFilter, setRuralFilter] = useState<'ALL' | 'UNIDOCENTE' | 'PLURIDOCENTE' | 'CBR' | 'INTERNADOS'>('ALL');
 
   // Urban Sub-filters
   const [urbanFilter, setUrbanFilter] = useState<'ALL' | 'TIEMPO_COMPLETO' | 'TIEMPO_EXTENDIDO' | 'DOBLE_TURNO' | 'JARDIN' | 'ARTE' | 'EDIFICIO_COMPARTIDO'>('ALL');
@@ -31,6 +31,7 @@ export default function Home() {
         if (ruralFilter === 'UNIDOCENTE' && school.ruralModal !== 'UNIDOCENTE') return false;
         if (ruralFilter === 'PLURIDOCENTE' && school.ruralModal !== 'PLURIDOCENTE') return false;
         if (ruralFilter === 'CBR' && !school.hasCBR) return false;
+        if (ruralFilter === 'INTERNADOS' && !school.hasBoarding) return false;
       }
 
       // 3. Urban Sub-filters
@@ -189,6 +190,18 @@ export default function Home() {
                   >
                     <GraduationCap className="w-3 h-3" />
                     Solo con CBR
+                  </button>
+                  <button
+                    onClick={() => setRuralFilter('INTERNADOS')}
+                    className={cn(
+                      "px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors flex items-center gap-1 whitespace-nowrap",
+                      ruralFilter === 'INTERNADOS'
+                        ? "bg-purple-600 text-white border-purple-600"
+                        : "bg-white text-slate-600 border-slate-200 hover:border-purple-300"
+                    )}
+                  >
+                    <Building2 className="w-3 h-3" />
+                    Internados
                   </button>
                 </div>
               </div>
