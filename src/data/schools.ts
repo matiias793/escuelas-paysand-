@@ -21,7 +21,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "2",
@@ -43,7 +45,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "4",
@@ -65,7 +69,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "5",
@@ -87,7 +93,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "6",
@@ -109,7 +117,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "7",
@@ -131,7 +141,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": true
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "PLURIDOCENTE"
   },
   {
     "id": "9",
@@ -153,7 +165,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "10",
@@ -175,7 +189,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "11",
@@ -197,7 +213,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "12",
@@ -219,7 +237,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "PLURIDOCENTE"
   },
   {
     "id": "13",
@@ -241,7 +261,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "14",
@@ -263,7 +285,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "15",
@@ -285,7 +309,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "16",
@@ -307,7 +333,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": true,
+    "ruralModal": "PLURIDOCENTE"
   },
   {
     "id": "17",
@@ -329,7 +357,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": true,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "18",
@@ -351,7 +381,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "19",
@@ -373,7 +405,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": true
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "20",
@@ -395,7 +429,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "21",
@@ -417,7 +453,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "22",
@@ -439,7 +477,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "23",
@@ -461,7 +501,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "24",
@@ -483,7 +525,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "PLURIDOCENTE"
   },
   {
     "id": "25",
@@ -505,7 +549,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "26",
@@ -527,7 +573,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "27",
@@ -549,7 +597,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "28",
@@ -571,7 +621,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": true
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "29",
@@ -593,7 +645,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "30",
@@ -615,7 +669,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "31",
@@ -637,7 +693,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "32",
@@ -659,7 +717,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "PLURIDOCENTE"
   },
   {
     "id": "34",
@@ -681,7 +741,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "35",
@@ -703,7 +765,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "36",
@@ -725,7 +789,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "37",
@@ -747,7 +813,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "38",
@@ -769,7 +837,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "39",
@@ -791,7 +861,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "40",
@@ -813,7 +885,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "41",
@@ -835,7 +909,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "42",
@@ -857,7 +933,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "43",
@@ -879,7 +957,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "44",
@@ -901,7 +981,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": true
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "45",
@@ -923,7 +1005,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "46",
@@ -945,7 +1029,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "47",
@@ -967,7 +1053,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "48",
@@ -989,7 +1077,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "49",
@@ -1011,7 +1101,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "50",
@@ -1033,7 +1125,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": true,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "51",
@@ -1055,7 +1149,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "52",
@@ -1077,7 +1173,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "PLURIDOCENTE"
   },
   {
     "id": "53",
@@ -1099,7 +1197,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": true
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "54",
@@ -1121,7 +1221,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "55",
@@ -1143,7 +1245,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "56",
@@ -1165,7 +1269,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "57",
@@ -1187,7 +1293,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "58",
@@ -1209,7 +1317,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "59",
@@ -1231,7 +1341,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": true
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "60",
@@ -1253,7 +1365,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "62",
@@ -1275,7 +1389,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "63",
@@ -1297,7 +1413,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "64",
@@ -1319,7 +1437,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "65",
@@ -1341,7 +1461,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": true
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "66",
@@ -1363,7 +1485,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": true
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "67",
@@ -1385,7 +1509,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "68",
@@ -1407,7 +1533,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": true
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "70",
@@ -1429,7 +1557,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "71",
@@ -1451,7 +1581,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "72",
@@ -1473,7 +1605,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": true
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "75",
@@ -1495,7 +1629,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": true
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "76",
@@ -1517,7 +1653,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "77",
@@ -1539,7 +1677,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "78",
@@ -1565,7 +1705,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "79",
@@ -1587,7 +1729,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": true
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "80",
@@ -1609,7 +1753,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "81",
@@ -1631,7 +1777,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "82",
@@ -1653,7 +1801,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "84",
@@ -1675,7 +1825,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": true
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "85",
@@ -1697,7 +1849,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "PLURIDOCENTE"
   },
   {
     "id": "86",
@@ -1719,7 +1873,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": true
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "87",
@@ -1741,7 +1897,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "88",
@@ -1763,7 +1921,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "89",
@@ -1785,7 +1945,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "90",
@@ -1807,7 +1969,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": true
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "91",
@@ -1829,7 +1993,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "92",
@@ -1851,7 +2017,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "93",
@@ -1873,7 +2041,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "95",
@@ -1895,7 +2065,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "97",
@@ -1917,7 +2089,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "99",
@@ -1939,7 +2113,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "102",
@@ -1961,7 +2137,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "103",
@@ -1983,7 +2161,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "104",
@@ -2005,7 +2185,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "106",
@@ -2027,7 +2209,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "107",
@@ -2049,7 +2233,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "108",
@@ -2071,7 +2257,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": true
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "UNIDOCENTE"
   },
   {
     "id": "109",
@@ -2093,7 +2281,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "110",
@@ -2115,7 +2305,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": "PLURIDOCENTE"
   },
   {
     "id": "111",
@@ -2137,7 +2329,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "112",
@@ -2159,7 +2353,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "113",
@@ -2181,7 +2377,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "114",
@@ -2203,7 +2401,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "115",
@@ -2225,7 +2425,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "116",
@@ -2247,7 +2449,9 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   },
   {
     "id": "117",
@@ -2269,6 +2473,8 @@ export const schools: School[] = [
     },
     "supplies": {
       "hasWaterBudget": false
-    }
+    },
+    "hasCBR": false,
+    "ruralModal": null
   }
 ];

@@ -58,6 +58,12 @@ export const SchoolCard: React.FC<SchoolCardProps> = ({ school, onClick }) => {
                             Especial
                         </span>
                     )}
+                    {school.hasCBR && (
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-indigo-100 text-indigo-700 text-[10px] font-bold uppercase tracking-wider border border-indigo-200">
+                            <GraduationCap className="w-3 h-3" />
+                            Ciclo Básico
+                        </span>
+                    )}
                 </div>
 
                 {/* Content */}

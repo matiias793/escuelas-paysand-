@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import { Search, School as SchoolIcon, Building2, Trees } from 'lucide-react';
+import Image from 'next/image';
+import { Search, Building2, Trees, GraduationCap } from 'lucide-react';
 import { SchoolCard } from '@/components/SchoolCard';
 import { SchoolDetailModal } from '@/components/SchoolDetailModal';
 import { schools } from '@/data/schools';
@@ -12,6 +13,7 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedSchool, setSelectedSchool] = useState<School | null>(null);
   const [activeTab, setActiveTab] = useState<'Urbana' | 'Rural'>('Urbana');
+  const [showOnlyCBR, setShowOnlyCBR] = useState(false);
 
   // Filter logic
   const filteredSchools = useMemo(() => {
@@ -19,7 +21,10 @@ export default function Home() {
       // 1. Zone Filter (Strict)
       if (school.zone !== activeTab) return false;
 
-      // 2. Search match
+      // 2. CBR Filter (Only for Rural)
+      if (activeTab === 'Rural' && showOnlyCBR && !school.hasCBR) return false;
+
+      // 3. Search match
       const searchLower = searchTerm.toLowerCase();
       if (!searchTerm) return true;
 
@@ -30,7 +35,7 @@ export default function Home() {
 
       return matchesSearch;
     });
-  }, [searchTerm, activeTab]);
+  }, [searchTerm, activeTab, showOnlyCBR]);
 
   return (
     <main className="min-h-screen bg-slate-50 font-sans pb-20">
@@ -38,9 +43,14 @@ export default function Home() {
       {/* Navbar / Header */}
       <header className="bg-white border-b border-slate-200 sticky top-0 z-20 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2 text-blue-800">
-            <div className="bg-blue-600 p-1.5 rounded-lg">
-              <SchoolIcon className="w-6 h-6 text-white" />
+          <div className="flex items-center gap-3 text-blue-800">
+            <div className="relative w-10 h-10 overflow-hidden rounded-lg">
+              <Image
+                src="/logo.jpg"
+                alt="Logo ANEP"
+                fill
+                className="object-cover"
+              />
             </div>
             <div>
               <h1 className="text-xl font-bold tracking-tight leading-none">Agenda Escolar</h1>
@@ -71,31 +81,51 @@ export default function Home() {
           </div>
 
           {/* Main Tabs */}
-          <div className="flex gap-4 border-b border-slate-200 w-full justify-center">
-            <button
-              onClick={() => setActiveTab('Urbana')}
-              className={cn(
-                "flex items-center gap-2 pb-4 px-6 border-b-2 font-semibold transition-all text-sm sm:text-base",
-                activeTab === 'Urbana'
-                  ? "border-blue-600 text-blue-700"
-                  : "border-transparent text-slate-500 hover:text-slate-700"
-              )}
-            >
-              <Building2 className="w-5 h-5" />
-              Urbanas
-            </button>
-            <button
-              onClick={() => setActiveTab('Rural')}
-              className={cn(
-                "flex items-center gap-2 pb-4 px-6 border-b-2 font-semibold transition-all text-sm sm:text-base",
-                activeTab === 'Rural'
-                  ? "border-green-600 text-green-700"
-                  : "border-transparent text-slate-500 hover:text-slate-700"
-              )}
-            >
-              <Trees className="w-5 h-5" />
-              Rurales
-            </button>
+          <div className="flex flex-col items-center">
+            <div className="flex gap-4 border-b border-slate-200 w-full justify-center">
+              <button
+                onClick={() => { setActiveTab('Urbana'); setShowOnlyCBR(false); }}
+                className={cn(
+                  "flex items-center gap-2 pb-4 px-6 border-b-2 font-semibold transition-all text-sm sm:text-base",
+                  activeTab === 'Urbana'
+                    ? "border-blue-600 text-blue-700"
+                    : "border-transparent text-slate-500 hover:text-slate-700"
+                )}
+              >
+                <Building2 className="w-5 h-5" />
+                Urbanas
+              </button>
+              <button
+                onClick={() => setActiveTab('Rural')}
+                className={cn(
+                  "flex items-center gap-2 pb-4 px-6 border-b-2 font-semibold transition-all text-sm sm:text-base",
+                  activeTab === 'Rural'
+                    ? "border-green-600 text-green-700"
+                    : "border-transparent text-slate-500 hover:text-slate-700"
+                )}
+              >
+                <Trees className="w-5 h-5" />
+                Rurales
+              </button>
+            </div>
+
+            {/* Sub-filters for Rural */}
+            {activeTab === 'Rural' && (
+              <div className="mt-4 animate-in fade-in slide-in-from-top-1">
+                <label className="flex items-center gap-2 cursor-pointer select-none bg-green-50 px-4 py-2 rounded-full border border-green-100 hover:bg-green-100 transition-colors">
+                  <input
+                    type="checkbox"
+                    className="w-4 h-4 text-green-600 rounded focus:ring-green-500 border-gray-300"
+                    checked={showOnlyCBR}
+                    onChange={(e) => setShowOnlyCBR(e.target.checked)}
+                  />
+                  <span className="text-sm font-medium text-green-800 flex items-center gap-1">
+                    <GraduationCap className="w-4 h-4" />
+                    Solo con Ciclo Básico (7°, 8°, 9°)
+                  </span>
+                </label>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -103,7 +133,7 @@ export default function Home() {
       {/* Grid Results */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="mb-6 flex justify-between items-center text-sm text-slate-500 font-medium">
-          <span>Mostrando {activeTab.toLowerCase()}s</span>
+          <span>Mostrando {activeTab.toLowerCase()}s {showOnlyCBR ? '(con CBR)' : ''}</span>
           <span>{filteredSchools.length} resultados</span>
         </div>
 

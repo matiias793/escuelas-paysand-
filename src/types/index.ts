@@ -33,8 +33,10 @@ export interface School {
         googleMapsLink?: string;
         address?: string;
     };
-    category: SchoolCategory | 'Sin Categoría';
+    category: SchoolCategory | 'Sin Categoría' | 'Especial';
     hasBoarding: boolean;
+    hasCBR?: boolean;
+    ruralModal?: 'UNIDOCENTE' | 'PLURIDOCENTE' | null;
     contact: {
         directorName: string;
         phone: string;
