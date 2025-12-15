@@ -1,0 +1,51 @@
+export type SchoolCategory =
+    | 'Tiempo Completo'
+    | 'Doble Turno'
+    | 'Tiempo Extendido'
+    | 'Especial'
+    | 'Aprender'
+    | 'Común'
+    | 'Sin Categoría';
+
+export type FoodServiceType =
+    | 'Copa de leche'
+    | 'Copa de leche + Almuerzo'
+    | 'Doble copa de leche'
+    | 'Doble copa de leche + Almuerzo'
+    | 'Solo Almuerzo'
+    | 'Régimen de Internado'
+    | 'Sin Información';
+
+export type StaffContractType =
+    | 'ANEP (Presupuestado)'
+    | 'Cooperativa'
+    | 'Comisión Fomento'
+    | 'MIDES';
+
+export interface School {
+    id: string;
+    number: number;
+    name: string;
+    zone: 'Rural' | 'Urbana';
+    location: {
+        lat?: number;
+        lng?: number;
+        googleMapsLink?: string;
+        address?: string;
+    };
+    category: SchoolCategory | 'Sin Categoría';
+    hasBoarding: boolean;
+    contact: {
+        directorName: string;
+        phone: string;
+        email: string;
+    };
+    foodService: FoodServiceType | 'Sin Información';
+    staff: {
+        totalHours: number;
+        contractTypes: StaffContractType[];
+    };
+    supplies: {
+        hasWaterBudget: boolean;
+    };
+}
