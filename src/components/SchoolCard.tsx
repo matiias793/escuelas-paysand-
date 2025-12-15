@@ -39,6 +39,11 @@ export const SchoolCard: React.FC<SchoolCardProps> = ({ school, onClick }) => {
                             </h3>
                             <p className="text-xs text-slate-400 font-medium mt-1 uppercase tracking-wide">
                                 {school.zone}
+                                {school.location?.city && (
+                                    <span className="text-slate-500 font-semibold ml-1">
+                                        • {school.location.city}
+                                    </span>
+                                )}
                             </p>
                         </div>
                     </div>

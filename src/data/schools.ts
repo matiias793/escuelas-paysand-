@@ -152,7 +152,9 @@ export const schools: School[] = [
     "number": 9,
     "name": "Escuela N° 9",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Colonia Paysandú"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -321,7 +323,9 @@ export const schools: School[] = [
     "number": 16,
     "name": "Escuela N° 16",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Cerro Chato"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -345,7 +349,9 @@ export const schools: School[] = [
     "number": 17,
     "name": "Escuela N° 17",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Piñera"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -393,7 +399,9 @@ export const schools: School[] = [
     "number": 19,
     "name": "Escuela N° 19",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Estación Porvenir"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -417,7 +425,9 @@ export const schools: School[] = [
     "number": 20,
     "name": "Escuela N° 20",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Arbolito"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -465,7 +475,9 @@ export const schools: School[] = [
     "number": 22,
     "name": "Escuela N° 22",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Palmar de Quebracho"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -513,7 +525,9 @@ export const schools: School[] = [
     "number": 24,
     "name": "Escuela N° 24",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Costa de Sacra"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -634,7 +648,9 @@ export const schools: School[] = [
     "number": 29,
     "name": "Escuela N° 29",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Tiatucura"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -658,7 +674,9 @@ export const schools: School[] = [
     "number": 30,
     "name": "Escuela N° 30",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Arroyo Malo"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -682,7 +700,9 @@ export const schools: School[] = [
     "number": 31,
     "name": "Escuela N° 31",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Sauce de Buricayupí"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -730,7 +750,9 @@ export const schools: School[] = [
     "number": 34,
     "name": "Escuela N° 34",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Puntas de Buricayupi"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -778,7 +800,9 @@ export const schools: School[] = [
     "number": 36,
     "name": "Escuela N° 36",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Pueblo Araújo"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -802,7 +826,9 @@ export const schools: School[] = [
     "number": 37,
     "name": "Escuela N° 37",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Puente de Guaviyu"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -874,7 +900,9 @@ export const schools: School[] = [
     "number": 40,
     "name": "Escuela N° 40",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Colonia Pintos Viana"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -898,7 +926,9 @@ export const schools: School[] = [
     "number": 41,
     "name": "Escuela N° 41",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Puntas de Cangüé"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -947,7 +977,9 @@ export const schools: School[] = [
     "number": 43,
     "name": "Escuela N° 43",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Parada Km 444"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -971,7 +1003,9 @@ export const schools: School[] = [
     "number": 44,
     "name": "Escuela N° 44",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Colonia Las Delicias"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -1043,7 +1077,9 @@ export const schools: School[] = [
     "number": 47,
     "name": "Escuela N° 47",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Colonia 19 de Abril"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -1091,7 +1127,9 @@ export const schools: School[] = [
     "number": 49,
     "name": "Escuela N° 49",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Piedra Sola"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -1139,7 +1177,9 @@ export const schools: School[] = [
     "number": 51,
     "name": "Escuela N° 51",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Guayabos"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -1163,7 +1203,9 @@ export const schools: School[] = [
     "number": 52,
     "name": "Escuela N° 52",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "El Eucalipto"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -1187,7 +1229,9 @@ export const schools: School[] = [
     "number": 53,
     "name": "Escuela N° 53",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Colonia Arroyo Malo"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -1235,7 +1279,9 @@ export const schools: School[] = [
     "number": 55,
     "name": "Escuela N° 55",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Colonia La Palma"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -1259,7 +1305,9 @@ export const schools: School[] = [
     "number": 56,
     "name": "Escuela N° 56",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Colonia Juan Gutiérrez"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -1332,7 +1380,9 @@ export const schools: School[] = [
     "number": 59,
     "name": "Escuela N° 59",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Sauce del Queguay Abajo"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -1380,7 +1430,9 @@ export const schools: School[] = [
     "number": 62,
     "name": "Escuela N° 62",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Federación"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -1452,7 +1504,9 @@ export const schools: School[] = [
     "number": 65,
     "name": "Escuela N° 65",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Ros de Oger"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -1500,7 +1554,9 @@ export const schools: School[] = [
     "number": 67,
     "name": "Escuela N° 67",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Parada Rivas"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -1548,7 +1604,9 @@ export const schools: School[] = [
     "number": 70,
     "name": "Escuela N° 70",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Santa Kilda"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -1596,7 +1654,9 @@ export const schools: School[] = [
     "number": 72,
     "name": "Escuela N° 72",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Parada Dayman"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -1620,7 +1680,9 @@ export const schools: School[] = [
     "number": 75,
     "name": "Escuela N° 75",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Saladero Guaviyú"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -1644,7 +1706,9 @@ export const schools: School[] = [
     "number": 76,
     "name": "Escuela N° 76",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Paso Castell de Corrales"
+    },
     "category": "Sin Categoría",
     "hasBoarding": true,
     "contact": {
@@ -1744,7 +1808,9 @@ export const schools: School[] = [
     "number": 80,
     "name": "Escuela N° 80",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Tres Bocas"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -1768,7 +1834,9 @@ export const schools: School[] = [
     "number": 81,
     "name": "Escuela N° 81",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Cuchilla del Fuego"
+    },
     "category": "Sin Categoría",
     "hasBoarding": true,
     "contact": {
@@ -1792,7 +1860,9 @@ export const schools: School[] = [
     "number": 82,
     "name": "Escuela N° 82",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Pandule"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -1864,7 +1934,9 @@ export const schools: School[] = [
     "number": 86,
     "name": "Escuela N° 86",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Meseta de Artigas"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -2130,7 +2202,9 @@ export const schools: School[] = [
     "number": 102,
     "name": "Escuela N° 102",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Colonia Ros de Oger"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {
@@ -2300,7 +2374,9 @@ export const schools: School[] = [
     "number": 110,
     "name": "Escuela N° 110",
     "zone": "Rural",
-    "location": {},
+    "location": {
+      "city": "Pueblo Gallinal"
+    },
     "category": "Sin Categoría",
     "hasBoarding": false,
     "contact": {

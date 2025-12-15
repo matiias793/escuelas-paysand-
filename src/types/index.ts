@@ -36,6 +36,7 @@ export interface School {
         lng?: number;
         googleMapsLink?: string;
         address?: string;
+        city?: string; // Localidad / Paraje
     };
     category: SchoolCategory;
     hasBoarding: boolean;
